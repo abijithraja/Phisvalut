@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhishVault</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>🛡️ PhishVault</h2>
+
+    <label for="urlInput">🔗 Enter or paste a URL:</label>
+    <input type="text" id="urlInput" placeholder="https://example.com" />
+
+    <div class="scan-mode">
+      <label for="scanMode">🧪 Scan Mode:</label>
+      <select id="scanMode">
+        <option value="quick">Quick</option>
+        <option value="deep">Deep</option>
+      </select>
+    </div>
+
+    <div class="ai-toggle">
+      <input type="checkbox" id="useAI" />
+      <label for="useAI">💡 Explain using AI (ChatGPT)</label>
+    </div>
+
+    <button id="scanBtn">🚀 Scan Now</button>
+
+    <div id="resultBox" class="hidden">
+      <h4>📊 Result:</h4>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

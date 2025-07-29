@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PhishVault Floating Panel</title>
+  <link rel="stylesheet" href="floatingPanel.css" />
+</head>
+<body>
+  <!-- Draggable Glossy Container -->
+  <div class="phishvault-container" id="draggable-container">
+
+    <!-- Header Bar (Drag Handle) -->
+    <div class="phishvault-header" id="drag-handle"> PhishVault</div>
+
+    <!-- URL Input Field -->
+    <label for="urlInput">Enter or paste a URL:</label>
+    <input type="text" id="urlInput" placeholder="https://example.com" />
+
+    <!-- Scan Mode Selection -->
+    <div class="scan-mode">
+      <label for="scanMode">Scan Mode:</label>
+      <select id="scanMode">
+        <option value="quick">Quick</option>
+        <option value="deep">Deep</option>
+      </select>
+    </div>
+
+    <!-- AI Explanation Toggle -->
+    <div class="ai-toggle">
+      <input type="checkbox" id="useAI" />
+      <label for="useAI">Explain using AI (ChatGPT)</label>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="darkmode-toggle">
+      <input type="checkbox" id="darkModeToggle" />
+      <label for="darkModeToggle">Dark Mode</label>
+    </div>
+
+    <!-- Buttons: Scan Link & Scan Page -->
+    <div class="button-group">
+      <button id="scanBtn"> Scan Link</button>
+      <button id="scanPageBtn">Scan This Page</button>
+    </div>
+
+    <!-- Result Box -->
+    <div id="resultBox" class="hidden">
+      <h4>Result:</h4>
+      <div id="result"></div>
+    </div>
+
+    <hr />
+
+    <!-- Data Leak Checker Section -->
+    <label for="leakInput"> Check Data Leak (Email / Phone):</label>
+    <input type="text" id="leakInput" placeholder="email@example.com or 9876543210" />
+    <button id="checkLeakBtn"> Check</button>
+
+    <!-- Leak Result -->
+    <div id="leakResultBox" class="hidden">
+      <h4>Leak Check Result:</h4>
+      <div id="leakResult"></div>
+    </div>
+
+  </div>
+
+  <script src="floatingPanel.js"></script>
+</body>
+</html>
