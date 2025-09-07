@@ -8,9 +8,10 @@
 <body>
   <!-- Draggable Glossy Container -->
   <div class="phishvault-container" id="draggable-container">
-
     <!-- Header Bar (Drag Handle) -->
-    <div class="phishvault-header" id="drag-handle"> PhishVault</div>
+    <div class="phishvault-header" id="drag-handle">
+      PhishVault
+    </div>
 
     <!-- URL Input Field -->
     <label for="urlInput">Enter or paste a URL:</label>
@@ -61,7 +62,19 @@
       <h4>Leak Check Result:</h4>
       <div id="leakResult"></div>
     </div>
+  </div>
 
+  <!-- Pop-up Result Overlay -->
+  <div id="resultPopup" class="result-popup hidden">
+    <div class="popup-content">
+      <div class="popup-header">
+        <h3>Scan Results</h3>
+        <button id="closePopup" class="close-btn">&times;</button>
+      </div>
+      <div class="popup-body">
+        <div id="popupResult"></div>
+      </div>
+    </div>
   </div>
 
   <script src="floatingPanel.js"></script>
